@@ -1,6 +1,5 @@
 import string
 
-# List of "unimportant" words (feel free to add more)
 skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'bad', 'beautiful', 'been', 'better', 'big', 'can', 'every', 'for',
               'from', 'good', 'have', 'her', 'here', 'hers', 'his', 'how',
@@ -27,8 +26,7 @@ def filter_words(words, skip_words):
     ['go', 'passage', 'south']
 
     """
-    #list comprehension
-    #return [word for word in words if word not in skip_words]
+
     do_not_skip=[]
     for word in words:
        if word not in skip_words:
@@ -84,34 +82,8 @@ def normalise_input(user_input):
 
     """
 
-    
-    #no_punct(user_input).lower
     remove_punctuation = remove_punct(user_input).lower()
     x = remove_punctuation.split(" ")
     filter_out_words = filter_words(x,skip_words)
     return filter_out_words
-    
-    #no_punct(user_input).lower()
-    #user_input.split("","")
-    #user_input_list = user_input.split("","")
-    #for user_input in user_input_list:
-    #    remove_punctuation = no_punct(user_input).lower()
-    #    remove_spaces = text.strip(remove_punctuation)
-    #    filter_out_words = filter_words(remove_spaces)
-    #    add_to_list = user_input_list.append(filter_out_words)
-    #return user_input_list
 
-   #do_not_skip=[]
-    #for word in words:
-     #  if word not in skip_words:
-      #      do_not_skip.append(word)
-            
-    #return do_not_skip
-    
-    
-    # Remove punctuation and convert to lower case
-    #no_punct = remove_punct(user_input).lower()
-
-    #
-    # COMPLETE ME!
-    #
